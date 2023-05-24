@@ -53,12 +53,15 @@
             i.setAttribute("data-price", y);
             ar.push(i);
         }
+        
         this.run = ()=>{
             addevent();
         }
+        
         function addevent(){
             select.onchange = sortingValue;
         }
+        
         function sortingValue(){
         
             if (this.value === 'Default') {
@@ -72,6 +75,7 @@
                 SortElem(field, li, false)
             }
         }
+        
         function SortElem(field,li, asc){
             let  dm, sortli;
             dm = asc ? 1 : -1;
